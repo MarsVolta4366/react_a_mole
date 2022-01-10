@@ -1,9 +1,20 @@
 // On step useEffect and Building a Mole Timer
 
-function EmptySlot() {
+import { useEffect } from "react"
+
+function EmptySlot(props) {
+
+    useEffect(() => {
+        let randomSeconds = Math.ceil(Math.random() * 5000)
+        let timer = setTimeout(() => {
+            props.setDisplayMole(true)
+        }, randomSeconds)
+        return () => clearTimeout(timer)
+    })
+
     return (
         <div>
-            <p>Empty Slot</p>
+            <img src="../images/molehill.png" alt="Mole Hill"/>
         </div>
     )
 }

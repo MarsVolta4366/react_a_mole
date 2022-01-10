@@ -12,9 +12,8 @@ function MoleContainer(props) {
     }
 
     return (
-        <div>
-            <h1>Mole Container</h1>
-            {displayMole ? <Mole/> : <EmptySlot/>}
+        <div style={{"display": "inline-block"}}>
+            {displayMole ? <Mole setDisplayMole={setDisplayMole} moleClicked={moleClicked}/> : <EmptySlot setDisplayMole={setDisplayMole}/>}
         </div>
     )
 }
