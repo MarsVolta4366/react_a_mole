@@ -1,5 +1,3 @@
-// On step useEffect and Building a Mole Timer
-
 import { useEffect } from "react"
 
 function EmptySlot(props) {
